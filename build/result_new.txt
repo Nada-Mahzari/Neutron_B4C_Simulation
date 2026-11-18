@@ -1,0 +1,6570 @@
+
+**************************************************************
+ Geant4 version Name: geant4-11-02 [MT]   (8-December-2023)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+G4PhysListFactory::GetReferencePhysList <FTFP_BERT_HP>  EMoption= 0
+<<< Geant4 Physics List simulation engine: FTFP_BERT_HP
+
+
+Checking overlaps for volume B4C_Physical:0 (G4Box) ... OK! 
+
+ hInelastic FTFP_BERT_HP : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/nada/software/geant4/geant4-v11.2.0-install/share/Geant4/data/G4NDL4.7
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use combined TransportationWithMsc                 Disabled
+Use general process                                1
+Enable linear polarisation for gamma               0
+Enable photoeffect sampling below K-shell          1
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Livermore data directory                           epics_2017
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Use ICRU90 data                                    0
+Fluctuations of dE/dx are enabled                  1
+Type of fluctuation model for leptons and hadrons  Urban
+Use built-in Birks satuaration                     0
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+======                 Atomic Deexcitation Parameters          ========
+=======================================================================
+Fluorescence enabled                               1
+Directory in G4LEDATA for fluorescence data files  fluor
+Auger electron cascade enabled                     1
+PIXE atomic de-excitation enabled                  0
+De-excitation module ignores cuts                  1
+Type of PIXE cross section for hadrons             Empirical
+Type of PIXE cross section for e+-                 Livermore
+=======================================================================
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  1  0
+### ===  Auger flag: 1
+### ===  Ignore cuts flag:   1
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 150 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 150 keV to 100 TeV in 62 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+ XStype:2 SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+======================================================================
+======          Radioactive Decay Physics Parameters           =======
+======================================================================
+min MeanLife (from G4NuclideTable)                1 ns 
+Max life time (from G4DeexPrecoParameters)        1000 ps 
+Internal e- conversion flag                       1
+Stored internal conversion coefficients           1
+Enabled atomic relaxation mode                    1
+Enable correlated gamma emission                  0
+Max 2J for sampling of angular correlations       10
+Atomic de-excitation enabled                      1
+Auger electron emission enabled                   1
+Check EM cuts disabled for atomic de-excitation   1
+Use Bearden atomic level energies                 0
+Use ANSTO fluorescence model                      0
+Threshold for very long decay time at rest        1 y  
+======================================================================
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+=======================================================
+======       ParticleHP Physics Parameters     ========
+=======================================================
+ Use only photo-evaporation      0
+ Skip missing isotopes           0
+ Neglect Doppler                 0
+ Do not adjust final state       0
+ Produce fission fragments       0
+ Use WendtFissionModel           0
+ Use NRESP71Model                0
+ Use DBRC                        0
+ PHP use Poisson                 0
+ PHP check                       1
+ CHECK HP NAMES                  0
+ Enable DEBUG                    0
+=======================================================
+
+@@@ G4ParticleHPInelastic instantiated for particle neutron/n    data directory is /home/nada/software/geant4/geant4-v11.2.0-install/share/Geant4/data/G4NDL4.7/Inelastic
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+-----------------------------------------------------------------------
+                           Hadronic Processes for B-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for D-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for GenericIon
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: Radioactivation
+-----------------------------------------------------------------------
+                           Hadronic Processes for He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-------------------------------------------------------------------------
+                           Hadronic Processes for anti_hypertriton
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_neutron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_proton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e-
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for gamma
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu-
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+  Process: muMinusCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for neutron
+  Process: hadElastic
+        Model:             hElasticCHIPS: 19.5 MeV ---> 100 TeV
+        Model:          NeutronHPElastic: 0 eV  ---> 20 MeV
+     Cr_sctns:        NeutronHPElasticXS: 0 eV  ---> 20 MeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 19.9 MeV ---> 6 GeV
+        Model:        NeutronHPInelastic: 0 eV  ---> 20 MeV
+     Cr_sctns:      NeutronHPInelasticXS: 0 eV  ---> 20 MeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+  Process: nCapture
+        Model:          NeutronHPCapture: 0 eV  ---> 20 MeV
+        Model:               nRadCapture: 19.9 MeV ---> 100 TeV
+     Cr_sctns:        NeutronHPCaptureXS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+  Process: nFission
+        Model:          NeutronHPFission: 0 eV  ---> 20 MeV
+        Model:                G4LFission: 19.9 MeV ---> 100 TeV
+     Cr_sctns:        NeutronHPFissionXS: 0 eV  ---> 20 MeV
+     Cr_sctns:                    ZeroXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi-
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for proton
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for sigma-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: Radioactivation
+=======================================================================
+======       Geant4 Native Pre-compound Model Parameters       ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy                  100 keV
+Pre-compound excitation high energy                 30 MeV
+Angular generator for pre-compound model            1
+Use NeverGoBack option for pre-compound model       0
+Use SoftCutOff option for pre-compound model        0
+Use CEM transitions for pre-compound model          1
+Use GNASH transitions for pre-compound model        0
+Use HETC submodel for pre-compound model            0
+=======================================================================
+======       Nuclear De-excitation Module Parameters           ========
+=======================================================================
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy                               10 eV 
+Min energy per nucleon for multifragmentation       200 GeV
+Limit excitation energy for Fermi BreakUp           20 MeV
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      1
+Time limit for long lived isomeres                  1000 ps 
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   1
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.809723 MeV
+Energy Loss: 0.190277 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.888894 MeV
+Energy Loss: 0.111106 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.992321 MeV
+Energy Loss: 0.00767934 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.778101 MeV
+Energy Loss: 0.221899 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.306268 MeV
+Energy Loss: 0.693732 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.821278 MeV
+Energy Loss: 0.178722 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.458248 MeV
+Energy Loss: 0.541752 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.513027 MeV
+Energy Loss: 0.486973 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.727022 MeV
+Energy Loss: 0.272978 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.758503 MeV
+Energy Loss: 0.241497 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.488796 MeV
+Energy Loss: 0.511204 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.7793 MeV
+Energy Loss: 0.2207 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.851657 MeV
+Energy Loss: 0.148343 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.725046 MeV
+Energy Loss: 0.274954 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.701621 MeV
+Energy Loss: 0.298379 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.83347 MeV
+Energy Loss: 0.16653 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.484331 MeV
+Energy Loss: 0.515669 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.795815 MeV
+Energy Loss: 0.204185 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.75604 MeV
+Energy Loss: 0.24396 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.85302 MeV
+Energy Loss: 0.14698 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.804539 MeV
+Energy Loss: 0.195461 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.649271 MeV
+Energy Loss: 0.350729 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.381884 MeV
+Energy Loss: 0.618116 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.979636 MeV
+Energy Loss: 0.0203638 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.789982 MeV
+Energy Loss: 0.210018 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.962649 MeV
+Energy Loss: 0.0373505 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.528915 MeV
+Energy Loss: 0.471085 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.910449 MeV
+Energy Loss: 0.0895509 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.636956 MeV
+Energy Loss: 0.363044 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.942949 MeV
+Energy Loss: 0.0570514 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.571565 MeV
+Energy Loss: 0.428435 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.963905 MeV
+Energy Loss: 0.0360953 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944083 MeV
+Energy Loss: 0.0559166 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.825735 MeV
+Energy Loss: 0.174265 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.365122 MeV
+Energy Loss: 0.634878 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.710739 MeV
+Energy Loss: 0.289261 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.913053 MeV
+Energy Loss: 0.0869467 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.511939 MeV
+Energy Loss: 0.488061 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.719792 MeV
+Energy Loss: 0.280208 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.710292 MeV
+Energy Loss: 0.289708 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.706246 MeV
+Energy Loss: 0.293754 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.801351 MeV
+Energy Loss: 0.198649 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.897741 MeV
+Energy Loss: 0.102259 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.868964 MeV
+Energy Loss: 0.131036 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.721993 MeV
+Energy Loss: 0.278007 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.907955 MeV
+Energy Loss: 0.092045 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.499268 MeV
+Energy Loss: 0.500732 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.691999 MeV
+Energy Loss: 0.308001 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.691773 MeV
+Energy Loss: 0.308227 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.561952 MeV
+Energy Loss: 0.438048 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.792255 MeV
+Energy Loss: 0.207745 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.387447 MeV
+Energy Loss: 0.612553 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.942284 MeV
+Energy Loss: 0.0577162 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.976516 MeV
+Energy Loss: 0.023484 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.960402 MeV
+Energy Loss: 0.039598 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.906796 MeV
+Energy Loss: 0.0932041 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.973406 MeV
+Energy Loss: 0.0265936 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.736695 MeV
+Energy Loss: 0.263305 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.665175 MeV
+Energy Loss: 0.334825 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.952152 MeV
+Energy Loss: 0.0478482 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.900897 MeV
+Energy Loss: 0.0991028 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.509392 MeV
+Energy Loss: 0.490608 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.826424 MeV
+Energy Loss: 0.173576 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.729812 MeV
+Energy Loss: 0.270188 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.725724 MeV
+Energy Loss: 0.274276 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.650138 MeV
+Energy Loss: 0.349862 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.359262 MeV
+Energy Loss: 0.640738 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.839094 MeV
+Energy Loss: 0.160906 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.881714 MeV
+Energy Loss: 0.118286 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.724312 MeV
+Energy Loss: 0.275688 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944358 MeV
+Energy Loss: 0.055642 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.468685 MeV
+Energy Loss: 0.531315 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.830935 MeV
+Energy Loss: 0.169065 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.729674 MeV
+Energy Loss: 0.270326 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.658713 MeV
+Energy Loss: 0.341287 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.757017 MeV
+Energy Loss: 0.242983 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.597819 MeV
+Energy Loss: 0.402181 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.759687 MeV
+Energy Loss: 0.240313 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.643415 MeV
+Energy Loss: 0.356585 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.493178 MeV
+Energy Loss: 0.506822 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.831849 MeV
+Energy Loss: 0.168151 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.502138 MeV
+Energy Loss: 0.497862 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.753975 MeV
+Energy Loss: 0.246025 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.859566 MeV
+Energy Loss: 0.140434 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.965838 MeV
+Energy Loss: 0.0341622 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.504623 MeV
+Energy Loss: 0.495377 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.857546 MeV
+Energy Loss: 0.142454 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.846576 MeV
+Energy Loss: 0.153424 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.858256 MeV
+Energy Loss: 0.141744 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.823463 MeV
+Energy Loss: 0.176537 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.750873 MeV
+Energy Loss: 0.249127 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.973358 MeV
+Energy Loss: 0.0266417 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.976195 MeV
+Energy Loss: 0.0238046 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.754648 MeV
+Energy Loss: 0.245352 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.849187 MeV
+Energy Loss: 0.150813 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.736716 MeV
+Energy Loss: 0.263284 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.617269 MeV
+Energy Loss: 0.382731 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.63515 MeV
+Energy Loss: 0.36485 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.875775 MeV
+Energy Loss: 0.124225 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.722908 MeV
+Energy Loss: 0.277092 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.884935 MeV
+Energy Loss: 0.115065 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720101 MeV
+Energy Loss: 0.279899 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.939658 MeV
+Energy Loss: 0.0603422 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.833428 MeV
+Energy Loss: 0.166572 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.764693 MeV
+Energy Loss: 0.235307 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.630134 MeV
+Energy Loss: 0.369866 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.698992 MeV
+Energy Loss: 0.301008 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.992972 MeV
+Energy Loss: 0.00702834 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.774625 MeV
+Energy Loss: 0.225375 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.670729 MeV
+Energy Loss: 0.329271 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.793795 MeV
+Energy Loss: 0.206205 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.739896 MeV
+Energy Loss: 0.260104 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.984934 MeV
+Energy Loss: 0.0150658 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.751975 MeV
+Energy Loss: 0.248025 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.979474 MeV
+Energy Loss: 0.0205255 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.940864 MeV
+Energy Loss: 0.059136 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.852204 MeV
+Energy Loss: 0.147796 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.509862 MeV
+Energy Loss: 0.490138 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.709347 MeV
+Energy Loss: 0.290653 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.879918 MeV
+Energy Loss: 0.120082 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.786335 MeV
+Energy Loss: 0.213665 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.805836 MeV
+Energy Loss: 0.194164 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.858864 MeV
+Energy Loss: 0.141136 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.931426 MeV
+Energy Loss: 0.0685742 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.640015 MeV
+Energy Loss: 0.359985 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.839948 MeV
+Energy Loss: 0.160052 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.999808 MeV
+Energy Loss: 0.00019241 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.947163 MeV
+Energy Loss: 0.0528371 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.934425 MeV
+Energy Loss: 0.0655747 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.72099 MeV
+Energy Loss: 0.27901 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.346024 MeV
+Energy Loss: 0.653976 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.608361 MeV
+Energy Loss: 0.391639 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.576144 MeV
+Energy Loss: 0.423856 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.413985 MeV
+Energy Loss: 0.586015 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.866138 MeV
+Energy Loss: 0.133862 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.589908 MeV
+Energy Loss: 0.410092 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.599435 MeV
+Energy Loss: 0.400565 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720504 MeV
+Energy Loss: 0.279496 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.971737 MeV
+Energy Loss: 0.0282626 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.267046 MeV
+Energy Loss: 0.732954 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.240057 MeV
+Energy Loss: 0.759943 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.71219 MeV
+Energy Loss: 0.28781 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.372684 MeV
+Energy Loss: 0.627316 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.850325 MeV
+Energy Loss: 0.149675 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.409633 MeV
+Energy Loss: 0.590367 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.791774 MeV
+Energy Loss: 0.208226 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.59482 MeV
+Energy Loss: 0.40518 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.584537 MeV
+Energy Loss: 0.415463 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.764 MeV
+Energy Loss: 0.236 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.930612 MeV
+Energy Loss: 0.0693876 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.963459 MeV
+Energy Loss: 0.0365413 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.701297 MeV
+Energy Loss: 0.298703 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.663511 MeV
+Energy Loss: 0.336489 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.803771 MeV
+Energy Loss: 0.196229 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.935625 MeV
+Energy Loss: 0.064375 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.80096 MeV
+Energy Loss: 0.19904 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.941128 MeV
+Energy Loss: 0.0588717 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.556715 MeV
+Energy Loss: 0.443285 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.642862 MeV
+Energy Loss: 0.357138 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.788246 MeV
+Energy Loss: 0.211754 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.787487 MeV
+Energy Loss: 0.212513 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.656884 MeV
+Energy Loss: 0.343116 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.784319 MeV
+Energy Loss: 0.215681 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.815162 MeV
+Energy Loss: 0.184838 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.815077 MeV
+Energy Loss: 0.184923 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.477084 MeV
+Energy Loss: 0.522916 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.534172 MeV
+Energy Loss: 0.465828 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.862831 MeV
+Energy Loss: 0.137169 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.853394 MeV
+Energy Loss: 0.146606 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.921579 MeV
+Energy Loss: 0.0784209 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.958643 MeV
+Energy Loss: 0.041357 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.845298 MeV
+Energy Loss: 0.154702 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.936665 MeV
+Energy Loss: 0.0633346 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.904216 MeV
+Energy Loss: 0.0957839 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.889903 MeV
+Energy Loss: 0.110097 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.285349 MeV
+Energy Loss: 0.714651 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.905082 MeV
+Energy Loss: 0.0949184 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.837922 MeV
+Energy Loss: 0.162078 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.4161 MeV
+Energy Loss: 0.5839 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.989696 MeV
+Energy Loss: 0.0103044 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.700113 MeV
+Energy Loss: 0.299887 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.729987 MeV
+Energy Loss: 0.270013 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.820372 MeV
+Energy Loss: 0.179628 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.705897 MeV
+Energy Loss: 0.294103 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.895432 MeV
+Energy Loss: 0.104568 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.700083 MeV
+Energy Loss: 0.299917 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.528914 MeV
+Energy Loss: 0.471086 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.788515 MeV
+Energy Loss: 0.211485 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.82076 MeV
+Energy Loss: 0.17924 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.907866 MeV
+Energy Loss: 0.0921335 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.830178 MeV
+Energy Loss: 0.169822 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.840774 MeV
+Energy Loss: 0.159226 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.855968 MeV
+Energy Loss: 0.144032 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.695646 MeV
+Energy Loss: 0.304354 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.623572 MeV
+Energy Loss: 0.376428 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.964646 MeV
+Energy Loss: 0.035354 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.974725 MeV
+Energy Loss: 0.0252747 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.7807 MeV
+Energy Loss: 0.2193 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.759849 MeV
+Energy Loss: 0.240151 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.63923 MeV
+Energy Loss: 0.36077 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.270051 MeV
+Energy Loss: 0.729949 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.676612 MeV
+Energy Loss: 0.323388 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.868342 MeV
+Energy Loss: 0.131658 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.906508 MeV
+Energy Loss: 0.0934923 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.619069 MeV
+Energy Loss: 0.380931 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.938828 MeV
+Energy Loss: 0.0611724 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.865418 MeV
+Energy Loss: 0.134582 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.377656 MeV
+Energy Loss: 0.622344 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.579048 MeV
+Energy Loss: 0.420952 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.75308 MeV
+Energy Loss: 0.24692 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.81396 MeV
+Energy Loss: 0.18604 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.711795 MeV
+Energy Loss: 0.288205 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.883461 MeV
+Energy Loss: 0.116539 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.62929 MeV
+Energy Loss: 0.37071 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.962019 MeV
+Energy Loss: 0.0379812 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.752358 MeV
+Energy Loss: 0.247642 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.844105 MeV
+Energy Loss: 0.155895 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.895022 MeV
+Energy Loss: 0.104978 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.876634 MeV
+Energy Loss: 0.123366 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.992498 MeV
+Energy Loss: 0.00750217 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.838859 MeV
+Energy Loss: 0.161141 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720195 MeV
+Energy Loss: 0.279805 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.627724 MeV
+Energy Loss: 0.372276 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.384794 MeV
+Energy Loss: 0.615206 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.427014 MeV
+Energy Loss: 0.572986 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.850185 MeV
+Energy Loss: 0.149815 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.800926 MeV
+Energy Loss: 0.199074 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.7357 MeV
+Energy Loss: 0.2643 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.700721 MeV
+Energy Loss: 0.299279 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.995629 MeV
+Energy Loss: 0.00437088 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.678484 MeV
+Energy Loss: 0.321516 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.661787 MeV
+Energy Loss: 0.338213 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.93959 MeV
+Energy Loss: 0.0604105 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.59854 MeV
+Energy Loss: 0.40146 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.803111 MeV
+Energy Loss: 0.196889 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.540758 MeV
+Energy Loss: 0.459242 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.806201 MeV
+Energy Loss: 0.193799 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.763902 MeV
+Energy Loss: 0.236098 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.319596 MeV
+Energy Loss: 0.680404 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.794148 MeV
+Energy Loss: 0.205852 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.27027 MeV
+Energy Loss: 0.72973 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.884736 MeV
+Energy Loss: 0.115264 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.521459 MeV
+Energy Loss: 0.478541 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.743678 MeV
+Energy Loss: 0.256322 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.557551 MeV
+Energy Loss: 0.442449 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.732705 MeV
+Energy Loss: 0.267295 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.834838 MeV
+Energy Loss: 0.165162 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.908275 MeV
+Energy Loss: 0.0917246 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.617048 MeV
+Energy Loss: 0.382952 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.914345 MeV
+Energy Loss: 0.0856546 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.918358 MeV
+Energy Loss: 0.0816424 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.689779 MeV
+Energy Loss: 0.310221 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.743652 MeV
+Energy Loss: 0.256348 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.797843 MeV
+Energy Loss: 0.202157 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.936182 MeV
+Energy Loss: 0.0638185 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.919298 MeV
+Energy Loss: 0.0807016 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.893083 MeV
+Energy Loss: 0.106917 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.92219 MeV
+Energy Loss: 0.0778099 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.538068 MeV
+Energy Loss: 0.461932 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.745962 MeV
+Energy Loss: 0.254038 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.584065 MeV
+Energy Loss: 0.415935 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.75898 MeV
+Energy Loss: 0.24102 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720502 MeV
+Energy Loss: 0.279498 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.821008 MeV
+Energy Loss: 0.178992 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.98837 MeV
+Energy Loss: 0.0116304 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.909785 MeV
+Energy Loss: 0.090215 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.529504 MeV
+Energy Loss: 0.470496 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.770986 MeV
+Energy Loss: 0.229014 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.697146 MeV
+Energy Loss: 0.302854 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.879239 MeV
+Energy Loss: 0.120761 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.598434 MeV
+Energy Loss: 0.401566 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.779938 MeV
+Energy Loss: 0.220062 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.25905 MeV
+Energy Loss: 0.74095 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.783413 MeV
+Energy Loss: 0.216587 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.948648 MeV
+Energy Loss: 0.0513525 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.877007 MeV
+Energy Loss: 0.122993 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.693058 MeV
+Energy Loss: 0.306942 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.838725 MeV
+Energy Loss: 0.161275 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.569307 MeV
+Energy Loss: 0.430693 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.926208 MeV
+Energy Loss: 0.0737925 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.829247 MeV
+Energy Loss: 0.170753 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.640598 MeV
+Energy Loss: 0.359402 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.44757 MeV
+Energy Loss: 0.55243 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.761288 MeV
+Energy Loss: 0.238712 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.737263 MeV
+Energy Loss: 0.262737 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.693196 MeV
+Energy Loss: 0.306804 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.931552 MeV
+Energy Loss: 0.0684478 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.555659 MeV
+Energy Loss: 0.444341 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.795593 MeV
+Energy Loss: 0.204407 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.535508 MeV
+Energy Loss: 0.464492 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.97821 MeV
+Energy Loss: 0.0217905 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.87032 MeV
+Energy Loss: 0.12968 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.861157 MeV
+Energy Loss: 0.138843 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.796674 MeV
+Energy Loss: 0.203326 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.90798 MeV
+Energy Loss: 0.0920201 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.883498 MeV
+Energy Loss: 0.116502 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.880481 MeV
+Energy Loss: 0.119519 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.821244 MeV
+Energy Loss: 0.178756 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.849064 MeV
+Energy Loss: 0.150936 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.715774 MeV
+Energy Loss: 0.284226 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.822194 MeV
+Energy Loss: 0.177806 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.959742 MeV
+Energy Loss: 0.0402583 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.835908 MeV
+Energy Loss: 0.164092 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.679141 MeV
+Energy Loss: 0.320859 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.704157 MeV
+Energy Loss: 0.295843 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.70856 MeV
+Energy Loss: 0.29144 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.792875 MeV
+Energy Loss: 0.207125 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.956114 MeV
+Energy Loss: 0.0438859 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.696271 MeV
+Energy Loss: 0.303729 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.760404 MeV
+Energy Loss: 0.239596 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.754898 MeV
+Energy Loss: 0.245102 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.786212 MeV
+Energy Loss: 0.213788 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.760595 MeV
+Energy Loss: 0.239405 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.724189 MeV
+Energy Loss: 0.275811 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.86801 MeV
+Energy Loss: 0.13199 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.870789 MeV
+Energy Loss: 0.129211 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.497637 MeV
+Energy Loss: 0.502363 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.475113 MeV
+Energy Loss: 0.524887 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.881673 MeV
+Energy Loss: 0.118327 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.824591 MeV
+Energy Loss: 0.175409 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.797082 MeV
+Energy Loss: 0.202918 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.867251 MeV
+Energy Loss: 0.132749 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.794942 MeV
+Energy Loss: 0.205058 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.462803 MeV
+Energy Loss: 0.537197 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.422509 MeV
+Energy Loss: 0.577491 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.628387 MeV
+Energy Loss: 0.371613 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.900246 MeV
+Energy Loss: 0.0997541 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.473333 MeV
+Energy Loss: 0.526667 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.790745 MeV
+Energy Loss: 0.209255 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.846994 MeV
+Energy Loss: 0.153006 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.564004 MeV
+Energy Loss: 0.435996 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.39289 MeV
+Energy Loss: 0.60711 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.569664 MeV
+Energy Loss: 0.430336 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.498194 MeV
+Energy Loss: 0.501806 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.986731 MeV
+Energy Loss: 0.0132686 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.943604 MeV
+Energy Loss: 0.056396 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.967272 MeV
+Energy Loss: 0.0327285 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.691557 MeV
+Energy Loss: 0.308443 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.412104 MeV
+Energy Loss: 0.587896 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.924672 MeV
+Energy Loss: 0.0753277 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.697953 MeV
+Energy Loss: 0.302047 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.763319 MeV
+Energy Loss: 0.236681 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.82824 MeV
+Energy Loss: 0.17176 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.946076 MeV
+Energy Loss: 0.0539236 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.775952 MeV
+Energy Loss: 0.224048 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.759472 MeV
+Energy Loss: 0.240528 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.859853 MeV
+Energy Loss: 0.140147 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.996697 MeV
+Energy Loss: 0.00330266 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720352 MeV
+Energy Loss: 0.279648 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.600742 MeV
+Energy Loss: 0.399258 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.848682 MeV
+Energy Loss: 0.151318 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.942068 MeV
+Energy Loss: 0.0579319 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.71679 MeV
+Energy Loss: 0.28321 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.780761 MeV
+Energy Loss: 0.219239 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944233 MeV
+Energy Loss: 0.0557667 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.831982 MeV
+Energy Loss: 0.168018 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.62136 MeV
+Energy Loss: 0.37864 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.722207 MeV
+Energy Loss: 0.277793 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.759015 MeV
+Energy Loss: 0.240985 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.96546 MeV
+Energy Loss: 0.0345403 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.738556 MeV
+Energy Loss: 0.261444 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.737391 MeV
+Energy Loss: 0.262609 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.992868 MeV
+Energy Loss: 0.00713204 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.707748 MeV
+Energy Loss: 0.292252 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.24909 MeV
+Energy Loss: 0.75091 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.5466 MeV
+Energy Loss: 0.4534 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.895766 MeV
+Energy Loss: 0.104234 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.823832 MeV
+Energy Loss: 0.176168 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.956454 MeV
+Energy Loss: 0.0435459 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.645211 MeV
+Energy Loss: 0.354789 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.734438 MeV
+Energy Loss: 0.265562 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.723875 MeV
+Energy Loss: 0.276125 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.780044 MeV
+Energy Loss: 0.219956 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.832495 MeV
+Energy Loss: 0.167505 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.827287 MeV
+Energy Loss: 0.172713 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.795165 MeV
+Energy Loss: 0.204835 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.863222 MeV
+Energy Loss: 0.136778 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.979315 MeV
+Energy Loss: 0.0206848 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.802625 MeV
+Energy Loss: 0.197375 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.997722 MeV
+Energy Loss: 0.00227763 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.493535 MeV
+Energy Loss: 0.506465 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.665979 MeV
+Energy Loss: 0.334021 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.471927 MeV
+Energy Loss: 0.528073 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.713603 MeV
+Energy Loss: 0.286397 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.656554 MeV
+Energy Loss: 0.343446 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.784457 MeV
+Energy Loss: 0.215543 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.794243 MeV
+Energy Loss: 0.205757 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.661543 MeV
+Energy Loss: 0.338457 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.888125 MeV
+Energy Loss: 0.111875 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.857962 MeV
+Energy Loss: 0.142038 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.817962 MeV
+Energy Loss: 0.182038 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.992054 MeV
+Energy Loss: 0.00794604 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.688514 MeV
+Energy Loss: 0.311486 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.761522 MeV
+Energy Loss: 0.238478 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.808179 MeV
+Energy Loss: 0.191821 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.190471 MeV
+Energy Loss: 0.809529 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.871673 MeV
+Energy Loss: 0.128327 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.708764 MeV
+Energy Loss: 0.291236 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.755496 MeV
+Energy Loss: 0.244504 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.523208 MeV
+Energy Loss: 0.476792 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.377845 MeV
+Energy Loss: 0.622155 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.858958 MeV
+Energy Loss: 0.141042 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.660438 MeV
+Energy Loss: 0.339562 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.679781 MeV
+Energy Loss: 0.320219 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.826912 MeV
+Energy Loss: 0.173088 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.649926 MeV
+Energy Loss: 0.350074 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.974191 MeV
+Energy Loss: 0.0258087 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.972373 MeV
+Energy Loss: 0.0276266 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.701621 MeV
+Energy Loss: 0.298379 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.637338 MeV
+Energy Loss: 0.362662 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.807178 MeV
+Energy Loss: 0.192822 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.711494 MeV
+Energy Loss: 0.288506 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.900034 MeV
+Energy Loss: 0.0999656 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.737123 MeV
+Energy Loss: 0.262877 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.803164 MeV
+Energy Loss: 0.196836 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.977063 MeV
+Energy Loss: 0.0229369 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.751903 MeV
+Energy Loss: 0.248097 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.429779 MeV
+Energy Loss: 0.570221 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.401752 MeV
+Energy Loss: 0.598248 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.997144 MeV
+Energy Loss: 0.00285591 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.573835 MeV
+Energy Loss: 0.426165 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.704029 MeV
+Energy Loss: 0.295971 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.919177 MeV
+Energy Loss: 0.0808227 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.978165 MeV
+Energy Loss: 0.0218346 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.82499 MeV
+Energy Loss: 0.17501 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.728199 MeV
+Energy Loss: 0.271801 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.508189 MeV
+Energy Loss: 0.491811 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.884734 MeV
+Energy Loss: 0.115266 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.838326 MeV
+Energy Loss: 0.161674 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.918778 MeV
+Energy Loss: 0.0812219 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.68458 MeV
+Energy Loss: 0.31542 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.873301 MeV
+Energy Loss: 0.126699 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.830692 MeV
+Energy Loss: 0.169308 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.94256 MeV
+Energy Loss: 0.0574404 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.477659 MeV
+Energy Loss: 0.522341 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.84007 MeV
+Energy Loss: 0.15993 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.64216 MeV
+Energy Loss: 0.35784 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.5921 MeV
+Energy Loss: 0.4079 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.346799 MeV
+Energy Loss: 0.653201 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.631857 MeV
+Energy Loss: 0.368143 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.969536 MeV
+Energy Loss: 0.0304641 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.646008 MeV
+Energy Loss: 0.353992 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.576295 MeV
+Energy Loss: 0.423705 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.636921 MeV
+Energy Loss: 0.363079 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.846256 MeV
+Energy Loss: 0.153744 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.753504 MeV
+Energy Loss: 0.246496 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.989936 MeV
+Energy Loss: 0.010064 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.562699 MeV
+Energy Loss: 0.437301 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.789466 MeV
+Energy Loss: 0.210534 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.577246 MeV
+Energy Loss: 0.422754 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.677982 MeV
+Energy Loss: 0.322018 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.846597 MeV
+Energy Loss: 0.153403 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944517 MeV
+Energy Loss: 0.0554835 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.730145 MeV
+Energy Loss: 0.269855 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.610295 MeV
+Energy Loss: 0.389705 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.796319 MeV
+Energy Loss: 0.203681 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.568545 MeV
+Energy Loss: 0.431455 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.796272 MeV
+Energy Loss: 0.203728 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.386633 MeV
+Energy Loss: 0.613367 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.827186 MeV
+Energy Loss: 0.172814 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.827216 MeV
+Energy Loss: 0.172784 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.837726 MeV
+Energy Loss: 0.162274 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.569542 MeV
+Energy Loss: 0.430458 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.808585 MeV
+Energy Loss: 0.191415 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.738073 MeV
+Energy Loss: 0.261927 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.865992 MeV
+Energy Loss: 0.134008 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.733825 MeV
+Energy Loss: 0.266175 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.712952 MeV
+Energy Loss: 0.287048 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.909139 MeV
+Energy Loss: 0.0908608 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.964927 MeV
+Energy Loss: 0.0350728 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.938455 MeV
+Energy Loss: 0.061545 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.837741 MeV
+Energy Loss: 0.162259 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.524922 MeV
+Energy Loss: 0.475078 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.69768 MeV
+Energy Loss: 0.30232 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.919778 MeV
+Energy Loss: 0.0802223 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.762874 MeV
+Energy Loss: 0.237126 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.723355 MeV
+Energy Loss: 0.276645 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.81261 MeV
+Energy Loss: 0.18739 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.996287 MeV
+Energy Loss: 0.00371322 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.951439 MeV
+Energy Loss: 0.0485609 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.729989 MeV
+Energy Loss: 0.270011 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.723232 MeV
+Energy Loss: 0.276768 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.846293 MeV
+Energy Loss: 0.153707 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.630667 MeV
+Energy Loss: 0.369333 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.810758 MeV
+Energy Loss: 0.189242 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.693934 MeV
+Energy Loss: 0.306066 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.406709 MeV
+Energy Loss: 0.593291 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.778275 MeV
+Energy Loss: 0.221725 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.728668 MeV
+Energy Loss: 0.271332 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.697662 MeV
+Energy Loss: 0.302338 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.876765 MeV
+Energy Loss: 0.123235 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.564133 MeV
+Energy Loss: 0.435867 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.331976 MeV
+Energy Loss: 0.668024 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.75205 MeV
+Energy Loss: 0.24795 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.786916 MeV
+Energy Loss: 0.213084 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.760896 MeV
+Energy Loss: 0.239104 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.984731 MeV
+Energy Loss: 0.0152687 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.653917 MeV
+Energy Loss: 0.346083 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.911752 MeV
+Energy Loss: 0.0882483 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.760612 MeV
+Energy Loss: 0.239388 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.872647 MeV
+Energy Loss: 0.127353 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.715411 MeV
+Energy Loss: 0.284589 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.834407 MeV
+Energy Loss: 0.165593 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.718307 MeV
+Energy Loss: 0.281693 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.408105 MeV
+Energy Loss: 0.591895 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.65892 MeV
+Energy Loss: 0.34108 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.901574 MeV
+Energy Loss: 0.0984258 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.652667 MeV
+Energy Loss: 0.347333 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.989369 MeV
+Energy Loss: 0.0106311 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.807492 MeV
+Energy Loss: 0.192508 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.886438 MeV
+Energy Loss: 0.113562 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.902262 MeV
+Energy Loss: 0.0977383 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.83152 MeV
+Energy Loss: 0.16848 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.703239 MeV
+Energy Loss: 0.296761 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.997239 MeV
+Energy Loss: 0.00276088 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.874398 MeV
+Energy Loss: 0.125602 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.835051 MeV
+Energy Loss: 0.164949 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.767033 MeV
+Energy Loss: 0.232967 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.93985 MeV
+Energy Loss: 0.0601497 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.585248 MeV
+Energy Loss: 0.414752 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.718942 MeV
+Energy Loss: 0.281058 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.719453 MeV
+Energy Loss: 0.280547 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.581867 MeV
+Energy Loss: 0.418133 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.727765 MeV
+Energy Loss: 0.272235 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.75256 MeV
+Energy Loss: 0.24744 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.84932 MeV
+Energy Loss: 0.15068 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.830255 MeV
+Energy Loss: 0.169745 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.856379 MeV
+Energy Loss: 0.143621 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.616429 MeV
+Energy Loss: 0.383571 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.532866 MeV
+Energy Loss: 0.467134 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.997017 MeV
+Energy Loss: 0.00298263 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.671683 MeV
+Energy Loss: 0.328317 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.954349 MeV
+Energy Loss: 0.0456506 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.966515 MeV
+Energy Loss: 0.0334847 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.745803 MeV
+Energy Loss: 0.254197 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.350928 MeV
+Energy Loss: 0.649072 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.961602 MeV
+Energy Loss: 0.0383976 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.987239 MeV
+Energy Loss: 0.0127608 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.713985 MeV
+Energy Loss: 0.286015 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.766765 MeV
+Energy Loss: 0.233235 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.870611 MeV
+Energy Loss: 0.129389 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.768949 MeV
+Energy Loss: 0.231051 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.8772 MeV
+Energy Loss: 0.1228 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.826086 MeV
+Energy Loss: 0.173914 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.799364 MeV
+Energy Loss: 0.200636 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.794848 MeV
+Energy Loss: 0.205152 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.768651 MeV
+Energy Loss: 0.231349 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.467052 MeV
+Energy Loss: 0.532948 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.873621 MeV
+Energy Loss: 0.126379 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.585369 MeV
+Energy Loss: 0.414631 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.748654 MeV
+Energy Loss: 0.251346 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.672671 MeV
+Energy Loss: 0.327329 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.70212 MeV
+Energy Loss: 0.29788 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.716395 MeV
+Energy Loss: 0.283605 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.106372 MeV
+Energy Loss: 0.893628 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.816281 MeV
+Energy Loss: 0.183719 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.218108 MeV
+Energy Loss: 0.781892 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.299883 MeV
+Energy Loss: 0.700117 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.975923 MeV
+Energy Loss: 0.0240773 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.296679 MeV
+Energy Loss: 0.703321 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.823667 MeV
+Energy Loss: 0.176333 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.979614 MeV
+Energy Loss: 0.0203861 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.97836 MeV
+Energy Loss: 0.02164 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.421984 MeV
+Energy Loss: 0.578016 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.897819 MeV
+Energy Loss: 0.102181 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.142364 MeV
+Energy Loss: 0.857636 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.796213 MeV
+Energy Loss: 0.203787 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.903841 MeV
+Energy Loss: 0.0961593 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.295944 MeV
+Energy Loss: 0.704056 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.762581 MeV
+Energy Loss: 0.237419 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.595453 MeV
+Energy Loss: 0.404547 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.333016 MeV
+Energy Loss: 0.666984 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.605407 MeV
+Energy Loss: 0.394593 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.86341 MeV
+Energy Loss: 0.13659 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.965689 MeV
+Energy Loss: 0.0343109 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.453931 MeV
+Energy Loss: 0.546069 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.762973 MeV
+Energy Loss: 0.237027 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.755812 MeV
+Energy Loss: 0.244188 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.199784 MeV
+Energy Loss: 0.800216 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.576262 MeV
+Energy Loss: 0.423738 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.604853 MeV
+Energy Loss: 0.395147 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.827526 MeV
+Energy Loss: 0.172474 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.680269 MeV
+Energy Loss: 0.319731 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944061 MeV
+Energy Loss: 0.0559385 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.720076 MeV
+Energy Loss: 0.279924 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.973612 MeV
+Energy Loss: 0.0263883 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.995315 MeV
+Energy Loss: 0.00468465 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.875488 MeV
+Energy Loss: 0.124512 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.850765 MeV
+Energy Loss: 0.149235 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.250361 MeV
+Energy Loss: 0.749639 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.965748 MeV
+Energy Loss: 0.0342523 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.787812 MeV
+Energy Loss: 0.212188 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.870767 MeV
+Energy Loss: 0.129233 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.679779 MeV
+Energy Loss: 0.320221 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.321086 MeV
+Energy Loss: 0.678914 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.89524 MeV
+Energy Loss: 0.10476 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.962062 MeV
+Energy Loss: 0.037938 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.271181 MeV
+Energy Loss: 0.728819 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.930995 MeV
+Energy Loss: 0.0690054 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.726861 MeV
+Energy Loss: 0.273139 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.570293 MeV
+Energy Loss: 0.429707 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.960265 MeV
+Energy Loss: 0.0397351 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.954628 MeV
+Energy Loss: 0.0453725 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.828355 MeV
+Energy Loss: 0.171645 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.617921 MeV
+Energy Loss: 0.382079 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.233277 MeV
+Energy Loss: 0.766723 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.640232 MeV
+Energy Loss: 0.359768 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.670103 MeV
+Energy Loss: 0.329897 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.814213 MeV
+Energy Loss: 0.185787 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.922569 MeV
+Energy Loss: 0.0774311 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.904162 MeV
+Energy Loss: 0.0958385 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.723226 MeV
+Energy Loss: 0.276774 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.543717 MeV
+Energy Loss: 0.456283 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.792009 MeV
+Energy Loss: 0.207991 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.597172 MeV
+Energy Loss: 0.402828 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.478639 MeV
+Energy Loss: 0.521361 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.903614 MeV
+Energy Loss: 0.096386 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.513312 MeV
+Energy Loss: 0.486688 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.973982 MeV
+Energy Loss: 0.0260184 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.688879 MeV
+Energy Loss: 0.311121 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.608037 MeV
+Energy Loss: 0.391963 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.476165 MeV
+Energy Loss: 0.523835 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.919374 MeV
+Energy Loss: 0.0806256 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.604896 MeV
+Energy Loss: 0.395104 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.7294 MeV
+Energy Loss: 0.2706 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.687 MeV
+Energy Loss: 0.313 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.579528 MeV
+Energy Loss: 0.420472 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.513707 MeV
+Energy Loss: 0.486293 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.823948 MeV
+Energy Loss: 0.176052 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.996643 MeV
+Energy Loss: 0.00335658 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.750834 MeV
+Energy Loss: 0.249166 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.873639 MeV
+Energy Loss: 0.126361 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.786321 MeV
+Energy Loss: 0.213679 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.709285 MeV
+Energy Loss: 0.290715 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.836058 MeV
+Energy Loss: 0.163942 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.927343 MeV
+Energy Loss: 0.0726566 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.973494 MeV
+Energy Loss: 0.0265061 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.721121 MeV
+Energy Loss: 0.278879 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.784696 MeV
+Energy Loss: 0.215304 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.845428 MeV
+Energy Loss: 0.154572 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.562576 MeV
+Energy Loss: 0.437424 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.19355 MeV
+Energy Loss: 0.80645 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.672336 MeV
+Energy Loss: 0.327664 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.782362 MeV
+Energy Loss: 0.217638 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.730454 MeV
+Energy Loss: 0.269546 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.636005 MeV
+Energy Loss: 0.363995 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.743949 MeV
+Energy Loss: 0.256051 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.98162 MeV
+Energy Loss: 0.0183804 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.337438 MeV
+Energy Loss: 0.662562 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.755383 MeV
+Energy Loss: 0.244617 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.794887 MeV
+Energy Loss: 0.205113 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.765624 MeV
+Energy Loss: 0.234376 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.952939 MeV
+Energy Loss: 0.0470615 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.702044 MeV
+Energy Loss: 0.297956 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.706935 MeV
+Energy Loss: 0.293065 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.820678 MeV
+Energy Loss: 0.179322 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.292842 MeV
+Energy Loss: 0.707158 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.85973 MeV
+Energy Loss: 0.14027 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.96578 MeV
+Energy Loss: 0.0342198 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.529104 MeV
+Energy Loss: 0.470896 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.888258 MeV
+Energy Loss: 0.111742 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.84439 MeV
+Energy Loss: 0.15561 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.941946 MeV
+Energy Loss: 0.058054 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.933689 MeV
+Energy Loss: 0.066311 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.653778 MeV
+Energy Loss: 0.346222 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.970635 MeV
+Energy Loss: 0.0293647 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.782923 MeV
+Energy Loss: 0.217077 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.934378 MeV
+Energy Loss: 0.065622 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.55127 MeV
+Energy Loss: 0.44873 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.744381 MeV
+Energy Loss: 0.255619 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.993076 MeV
+Energy Loss: 0.00692424 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.569585 MeV
+Energy Loss: 0.430415 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.950706 MeV
+Energy Loss: 0.0492939 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.700949 MeV
+Energy Loss: 0.299051 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.852325 MeV
+Energy Loss: 0.147675 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.780604 MeV
+Energy Loss: 0.219396 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.852447 MeV
+Energy Loss: 0.147553 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.892088 MeV
+Energy Loss: 0.107912 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.786925 MeV
+Energy Loss: 0.213075 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.919514 MeV
+Energy Loss: 0.0804859 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.983659 MeV
+Energy Loss: 0.0163409 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.944356 MeV
+Energy Loss: 0.0556437 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.408538 MeV
+Energy Loss: 0.591462 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.963304 MeV
+Energy Loss: 0.0366961 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.780151 MeV
+Energy Loss: 0.219849 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.985899 MeV
+Energy Loss: 0.0141015 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.718161 MeV
+Energy Loss: 0.281839 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.729822 MeV
+Energy Loss: 0.270178 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.80156 MeV
+Energy Loss: 0.19844 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.912199 MeV
+Energy Loss: 0.0878013 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.878768 MeV
+Energy Loss: 0.121232 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.947504 MeV
+Energy Loss: 0.0524962 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.735673 MeV
+Energy Loss: 0.264327 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.721302 MeV
+Energy Loss: 0.278698 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.90141 MeV
+Energy Loss: 0.0985898 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.913695 MeV
+Energy Loss: 0.0863053 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.51755 MeV
+Energy Loss: 0.48245 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.809009 MeV
+Energy Loss: 0.190991 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.759161 MeV
+Energy Loss: 0.240839 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.647546 MeV
+Energy Loss: 0.352454 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.874773 MeV
+Energy Loss: 0.125227 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.960833 MeV
+Energy Loss: 0.0391672 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.920606 MeV
+Energy Loss: 0.0793942 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.490276 MeV
+Energy Loss: 0.509724 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 1 MeV
+Energy Loss: 0 MeV
+Hadronic Interaction: No
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.745331 MeV
+Energy Loss: 0.254669 MeV
+Hadronic Interaction: Yes
+
+--- Neutron Energy Loss ---
+Initial Energy: 1 MeV
+Final Energy: 0.952868 MeV
+Energy Loss: 0.0471322 MeV
+Hadronic Interaction: Yes

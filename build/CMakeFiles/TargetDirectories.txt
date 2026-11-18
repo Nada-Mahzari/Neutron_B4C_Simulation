@@ -1,0 +1,3 @@
+/home/nada/Neutron_B4C_Simulation/build/CMakeFiles/Neutron_B4C_Simulation.dir
+/home/nada/Neutron_B4C_Simulation/build/CMakeFiles/edit_cache.dir
+/home/nada/Neutron_B4C_Simulation/build/CMakeFiles/rebuild_cache.dir

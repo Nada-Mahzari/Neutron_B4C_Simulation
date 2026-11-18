@@ -1,0 +1,25 @@
+#ifndef STEPPING_ACTION_HH
+#define STEPPING_ACTION_HH
+
+#include "G4UserSteppingAction.hh"
+#include "globals.hh"
+
+#include <fstream>
+
+class SteppingAction : public G4UserSteppingAction
+{
+public:
+    SteppingAction();
+    ~SteppingAction();
+
+    void UserSteppingAction(const G4Step* step) override;
+
+private:
+    G4double initialEnergy = 0.0;
+    G4bool hasCollided = false;
+    G4bool recorded = false;
+
+    std::ofstream outputFile;
+};
+
+#endif

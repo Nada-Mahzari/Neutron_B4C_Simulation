@@ -1,0 +1,12 @@
+/vis/open TSG_QT_ZB
+/vis/drawVolume
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/set/autoRefresh true
+
+/tracking/storeTrajectory 1
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/setRGBA neutron 1 0 0 1
+/vis/scene/endOfEventAction accumulate
+/tracking/verbose 1
+/run/beamOn 1
